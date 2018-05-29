@@ -1,0 +1,14 @@
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.deps.json
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.runtimeconfig.json
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.runtimeconfig.dev.json
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.dll
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.pdb
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.OOP.dll
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.OOP.pdb
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.csprojAssemblyReference.cache
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.csproj.CoreCompileInputs.cache
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.AssemblyInfoInputs.cache
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.AssemblyInfo.cs
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.csproj.CopyComplete
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.dll
+c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.pdb

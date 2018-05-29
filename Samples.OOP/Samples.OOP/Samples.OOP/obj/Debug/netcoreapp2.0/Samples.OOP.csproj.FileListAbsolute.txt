@@ -1,0 +1,9 @@
+c:\users\lpintado\source\repos\Samples.OOP\Samples.OOP\bin\Debug\netcoreapp2.0\Samples.OOP.deps.json
+c:\users\lpintado\source\repos\Samples.OOP\Samples.OOP\bin\Debug\netcoreapp2.0\Samples.OOP.dll
+c:\users\lpintado\source\repos\Samples.OOP\Samples.OOP\bin\Debug\netcoreapp2.0\Samples.OOP.pdb
+c:\users\lpintado\source\repos\Samples.OOP\Samples.OOP\obj\Debug\netcoreapp2.0\Samples.OOP.csprojAssemblyReference.cache
+c:\users\lpintado\source\repos\Samples.OOP\Samples.OOP\obj\Debug\netcoreapp2.0\Samples.OOP.csproj.CoreCompileInputs.cache
+c:\users\lpintado\source\repos\Samples.OOP\Samples.OOP\obj\Debug\netcoreapp2.0\Samples.OOP.AssemblyInfoInputs.cache
+c:\users\lpintado\source\repos\Samples.OOP\Samples.OOP\obj\Debug\netcoreapp2.0\Samples.OOP.AssemblyInfo.cs
+c:\users\lpintado\source\repos\Samples.OOP\Samples.OOP\obj\Debug\netcoreapp2.0\Samples.OOP.dll
+c:\users\lpintado\source\repos\Samples.OOP\Samples.OOP\obj\Debug\netcoreapp2.0\Samples.OOP.pdb
