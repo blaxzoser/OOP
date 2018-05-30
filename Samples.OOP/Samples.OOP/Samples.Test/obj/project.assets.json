@@ -680,23 +680,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lpintado\\.nuget\\packages\\": {},
+    "C:\\Users\\bebote\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\lpintado\\source\\repos\\Samples.OOP\\Samples.Test\\Samples.Test.csproj",
+      "projectUniqueName": "C:\\Users\\bebote\\source\\repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.Test\\Samples.Test.csproj",
       "projectName": "Samples.Test",
-      "projectPath": "c:\\Users\\lpintado\\source\\repos\\Samples.OOP\\Samples.Test\\Samples.Test.csproj",
-      "packagesPath": "C:\\Users\\lpintado\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\lpintado\\source\\repos\\Samples.OOP\\Samples.Test\\obj\\",
+      "projectPath": "C:\\Users\\bebote\\source\\repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.Test\\Samples.Test.csproj",
+      "packagesPath": "C:\\Users\\bebote\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bebote\\source\\repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lpintado\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bebote\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -704,14 +704,13 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://bofaz.pkgs.visualstudio.com/DefaultCollection/_packaging/BofI.NuGet/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "c:\\Users\\lpintado\\source\\repos\\Samples.OOP\\Samples.OOP\\Samples.OOP.csproj": {
-              "projectPath": "c:\\Users\\lpintado\\source\\repos\\Samples.OOP\\Samples.OOP\\Samples.OOP.csproj"
+            "C:\\Users\\bebote\\source\\repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.OOP\\Samples.OOP.csproj": {
+              "projectPath": "C:\\Users\\bebote\\source\\repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.OOP\\Samples.OOP.csproj"
             }
           }
         }
