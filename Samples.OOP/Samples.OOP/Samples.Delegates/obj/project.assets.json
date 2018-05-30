@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lpintado\\.nuget\\packages\\": {},
+    "C:\\Users\\bebote\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\lpintado\\source\\repos\\Samples.OOP\\Samples.Delegates\\Samples.Delegates.csproj",
+      "projectUniqueName": "C:\\Users\\bebote\\Source\\Repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.Delegates\\Samples.Delegates.csproj",
       "projectName": "Samples.Delegates",
-      "projectPath": "c:\\Users\\lpintado\\source\\repos\\Samples.OOP\\Samples.Delegates\\Samples.Delegates.csproj",
-      "packagesPath": "C:\\Users\\lpintado\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\lpintado\\source\\repos\\Samples.OOP\\Samples.Delegates\\obj\\",
+      "projectPath": "C:\\Users\\bebote\\Source\\Repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.Delegates\\Samples.Delegates.csproj",
+      "packagesPath": "C:\\Users\\bebote\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bebote\\Source\\Repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.Delegates\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\lpintado\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bebote\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -688,8 +688,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://bofaz.pkgs.visualstudio.com/DefaultCollection/_packaging/BofI.NuGet/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
