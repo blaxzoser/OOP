@@ -86,23 +86,21 @@ namespace Samples.Test
             Console.ReadKey();
         }
 
-        //Classic override with out override
+        //What happen when you change 'new' vs override(nothing)
+        // in the case you put @override this scenario teacherB,teacherC  calls alwayas to father
+        // int the case you put @new it gonna be good call the child
         public static void ScenarioFour()
         {
             EnglishTeacher  teacher = new EnglishTeacher();
             teacher.Dance();
-            teacher.ShowMeDance(); // Show child - public  void ShowMeDance()
             Console.WriteLine("------------------");
 
-            Teacher teacher1 = new EnglishTeacher();
-            teacher1.Dance();
-            teacher1.ShowMeDance();  // Show father -public virtual void Dance()
+            Teacher teacherB = new EnglishTeacher();
+            teacherB.Dance();
             Console.WriteLine("------------------");
 
-            Teacher newTeacher = (Teacher)teacher;
-            newTeacher.Dance();
-            newTeacher.ShowMeDance(); // Show father -public virtual void Dance()
-
+            Teacher teacherC = (Teacher)teacher;
+            teacherC.Dance();
 
             Console.WriteLine("------------------");
             ((Teacher)teacher).Dance();
