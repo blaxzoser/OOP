@@ -85,5 +85,54 @@ namespace Samples.Test
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
+
+        //Classic override with out override
+        public static void ScenarioFour()
+        {
+            EnglishTeacher  teacher = new EnglishTeacher();
+            teacher.Dance();
+            teacher.ShowMeDance(); // Show child - public  void ShowMeDance()
+            Console.WriteLine("------------------");
+
+            Teacher teacher1 = new EnglishTeacher();
+            teacher1.Dance();
+            teacher1.ShowMeDance();  // Show father -public virtual void Dance()
+            Console.WriteLine("------------------");
+
+            Teacher newTeacher = (Teacher)teacher;
+            newTeacher.Dance();
+            newTeacher.ShowMeDance(); // Show father -public virtual void Dance()
+
+
+            Console.WriteLine("------------------");
+            ((Teacher)teacher).Dance();
+            // Keep the console open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
+
+        //Classic override with "new" witout override
+        public static void ScenarioFive()
+        {
+            NewStyleTeacher teacher = new NewStyleTeacher();
+            teacher.Dance();  // Show Child 
+            teacher.ShowMeDance(); // Show Father 
+            Console.WriteLine("------------------");
+
+    
+            Teacher newTeacher = (Teacher)teacher;
+            newTeacher.Dance();
+            newTeacher.ShowMeDance(); // Show father -public virtual void Dance()
+
+
+            Console.WriteLine("------------------");
+            ((Teacher)teacher).Dance();
+            // Keep the console open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
+
     }
 }

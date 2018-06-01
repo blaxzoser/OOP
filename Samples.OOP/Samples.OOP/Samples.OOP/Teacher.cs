@@ -88,12 +88,12 @@ namespace Samples.OOP
 
         public virtual void Dance()
         {
-            System.Console.WriteLine("Dance- BASE");
+            System.Console.WriteLine("Dance()-BASE");
         }
 
-        public void ShowMeDance()
+        public  void ShowMeDance()
         {
-            System.Console.Write("Show me Dance--");
+            System.Console.WriteLine("Show me Dance-BASE");
             Dance();
         }
 

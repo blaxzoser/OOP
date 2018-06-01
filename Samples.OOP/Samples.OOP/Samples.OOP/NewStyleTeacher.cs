@@ -11,7 +11,10 @@ namespace Samples.OOP
             System.Console.WriteLine("New Sytle-DANCE");
         }
 
-
+        public new void ShowMeDance()
+        {
+            System.Console.WriteLine("New Show me dance foreverrrrrrrrrr");
+        }
 
     }
 }
