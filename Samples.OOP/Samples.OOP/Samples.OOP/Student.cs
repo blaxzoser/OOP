@@ -39,7 +39,7 @@ namespace Samples.OOP
         //Showwing apply again
         public  void Dance()
         {
-            System.Console.WriteLine("Move Dance Student by interface");
+            System.Console.WriteLine("Move Dance Student by Class");
         }
     }
 }

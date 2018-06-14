@@ -8,7 +8,7 @@ namespace Samples.Test
     {
         static void Main(string[] args)
         {
-            InterfaceSamples.ScenarioOne();
+            PolymorphismSamples.ScenarioEight();
         }
 
     }

@@ -12,3 +12,17 @@ c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\
 c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.csproj.CopyComplete
 c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.dll
 c:\Users\lpintado\source\repos\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.pdb
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.deps.json
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.runtimeconfig.json
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.runtimeconfig.dev.json
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.dll
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.Test.pdb
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.OOP.dll
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.OOP.pdb
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.csprojAssemblyReference.cache
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.csproj.CoreCompileInputs.cache
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.AssemblyInfoInputs.cache
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.AssemblyInfo.cs
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.csproj.CopyComplete
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.dll
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.pdb

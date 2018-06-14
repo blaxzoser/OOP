@@ -85,5 +85,52 @@ namespace Samples.Test
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
+
+        //What happen when you change 'new' vs override(nothing)
+        // in the case you put @override this scenario teacherB,teacherC  calls alwayas to father
+        // int the case you put @new it gonna be good call the child
+        public static void ScenarioFour()
+        {
+            EnglishTeacher  teacher = new EnglishTeacher();
+            teacher.Dance();
+            Console.WriteLine("------------------");
+
+            Teacher teacherB = new EnglishTeacher();
+            teacherB.Dance();
+            Console.WriteLine("------------------");
+
+            Teacher teacherC = (Teacher)teacher;
+            teacherC.Dance();
+
+            Console.WriteLine("------------------");
+            ((Teacher)teacher).Dance();
+            // Keep the console open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
+
+        //Classic override with "new" witout override
+        public static void ScenarioFive()
+        {
+            NewStyleTeacher teacher = new NewStyleTeacher();
+            teacher.Dance();  // Show Child 
+            teacher.ShowMeDance(); // Show Father 
+            Console.WriteLine("------------------");
+
+    
+            Teacher newTeacher = (Teacher)teacher;
+            newTeacher.Dance();
+            newTeacher.ShowMeDance(); // Show father -public virtual void Dance()
+
+
+            Console.WriteLine("------------------");
+            ((Teacher)teacher).Dance();
+            // Keep the console open in debug mode.
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
+
     }
 }
