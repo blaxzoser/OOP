@@ -103,12 +103,12 @@ namespace Samples.Test
             System.Console.WriteLine("----------");
 
             NewStyleTeacher newStyleTeacher = new NewStyleTeacher();
-            newStyleTeacher.ShowMeDance(); //go to the old
-            newStyleTeacher.Dance(); //Force to dance
+            newStyleTeacher.ShowMeDance(); //go to the new
+            newStyleTeacher.Dance(); ///go to the new
             System.Console.WriteLine("----------");
 
             BachataTeacher bachataTeacher = new BachataTeacher();
-            bachataTeacher.ShowMeDance(); //go to the new
+            bachataTeacher.ShowMeDance(); //go to  base
             System.Console.WriteLine("----------");
 
             StupidTeacher stupidTeacher = new StupidTeacher();
