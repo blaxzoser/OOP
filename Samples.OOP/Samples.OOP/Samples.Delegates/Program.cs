@@ -2,11 +2,14 @@
 
 namespace Samples.Delegates
 {
-    class Program
+    public class Program
     {
+       
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DelegateSamples.ScenarioTree();
+            System.Console.ReadLine();
         }
     }
 }
