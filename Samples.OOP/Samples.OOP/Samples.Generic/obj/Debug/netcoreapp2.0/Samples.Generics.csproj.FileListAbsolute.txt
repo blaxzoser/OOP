@@ -3,7 +3,6 @@ C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Generic\bin\Deb
 C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Generic\bin\Debug\netcoreapp2.0\Samples.Generics.runtimeconfig.dev.json
 C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Generic\bin\Debug\netcoreapp2.0\Samples.Generics.dll
 C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Generic\bin\Debug\netcoreapp2.0\Samples.Generics.pdb
-C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Generic\obj\Debug\netcoreapp2.0\Samples.Generics.csprojAssemblyReference.cache
 C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Generic\obj\Debug\netcoreapp2.0\Samples.Generics.csproj.CoreCompileInputs.cache
 C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Generic\obj\Debug\netcoreapp2.0\Samples.Generics.AssemblyInfoInputs.cache
 C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Generic\obj\Debug\netcoreapp2.0\Samples.Generics.AssemblyInfo.cs

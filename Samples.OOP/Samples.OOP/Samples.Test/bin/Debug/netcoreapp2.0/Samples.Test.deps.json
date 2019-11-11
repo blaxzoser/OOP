@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v2.0": {
       "Samples.Test/1.0.0": {
         "dependencies": {
-          "Samples.OOP": "1.0.0"
+          "Samples.OOP": "1.0.0",
+          "Samples.SOLID": "1.0.0"
         },
         "runtime": {
           "Samples.Test.dll": {}
@@ -17,6 +18,11 @@
       "Samples.OOP/1.0.0": {
         "runtime": {
           "Samples.OOP.dll": {}
+        }
+      },
+      "Samples.SOLID/1.0.0": {
+        "runtime": {
+          "Samples.SOLID.dll": {}
         }
       }
     }
@@ -28,6 +34,11 @@
       "sha512": ""
     },
     "Samples.OOP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Samples.SOLID/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

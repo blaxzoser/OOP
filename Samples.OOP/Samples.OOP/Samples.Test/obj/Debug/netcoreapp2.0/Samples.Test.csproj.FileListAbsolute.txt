@@ -26,3 +26,6 @@ C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\
 C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.csproj.CopyComplete
 C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.dll
 C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\obj\Debug\netcoreapp2.0\Samples.Test.pdb
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.SOLID.dll
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.SOLID.pdb
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.Test\bin\Debug\netcoreapp2.0\Samples.SOLID.dll.config

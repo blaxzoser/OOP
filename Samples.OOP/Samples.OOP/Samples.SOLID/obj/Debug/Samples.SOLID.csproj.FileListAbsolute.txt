@@ -1,0 +1,7 @@
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.SOLID\obj\Debug\Samples.SOLID.csproj.CoreCompileInputs.cache
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.SOLID\bin\Debug\Samples.SOLID.dll.config
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.SOLID\bin\Debug\Samples.SOLID.dll
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.SOLID\bin\Debug\Samples.SOLID.pdb
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.SOLID\obj\Debug\Samples.SOLID.dll
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.SOLID\obj\Debug\Samples.SOLID.pdb
+C:\Users\bebote\source\repos\OOP\Samples.OOP\Samples.OOP\Samples.SOLID\obj\Debug\Samples.SOLID.csprojAssemblyReference.cache

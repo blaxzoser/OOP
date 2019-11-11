@@ -206,6 +206,15 @@
         "runtime": {
           "bin/placeholder/Samples.OOP.dll": {}
         }
+      },
+      "Samples.SOLID/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Samples.SOLID.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Samples.SOLID.dll": {}
+        }
       }
     }
   },
@@ -671,12 +680,18 @@
       "type": "project",
       "path": "../Samples.OOP/Samples.OOP.csproj",
       "msbuildProject": "../Samples.OOP/Samples.OOP.csproj"
+    },
+    "Samples.SOLID/1.0.0": {
+      "type": "project",
+      "path": "../Samples.SOLID/Samples.SOLID.csproj",
+      "msbuildProject": "../Samples.SOLID/Samples.SOLID.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.NETCore.App >= 2.0.0",
-      "Samples.OOP >= 1.0.0"
+      "Samples.OOP >= 1.0.0",
+      "Samples.SOLID >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -711,6 +726,9 @@
           "projectReferences": {
             "C:\\Users\\bebote\\source\\repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.OOP\\Samples.OOP.csproj": {
               "projectPath": "C:\\Users\\bebote\\source\\repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.OOP\\Samples.OOP.csproj"
+            },
+            "C:\\Users\\bebote\\source\\repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.SOLID\\Samples.SOLID.csproj": {
+              "projectPath": "C:\\Users\\bebote\\source\\repos\\OOP\\Samples.OOP\\Samples.OOP\\Samples.SOLID\\Samples.SOLID.csproj"
             }
           }
         }
