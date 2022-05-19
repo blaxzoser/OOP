@@ -1,0 +1,12 @@
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\bin\Debug\net6.0\Samples.OOP.deps.json
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\bin\Debug\net6.0\Samples.OOP.dll
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\bin\Debug\net6.0\Samples.OOP.pdb
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\obj\Debug\net6.0\Samples.OOP.csproj.AssemblyReference.cache
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\obj\Debug\net6.0\Samples.OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\obj\Debug\net6.0\Samples.OOP.AssemblyInfoInputs.cache
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\obj\Debug\net6.0\Samples.OOP.AssemblyInfo.cs
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\obj\Debug\net6.0\Samples.OOP.csproj.CoreCompileInputs.cache
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\obj\Debug\net6.0\Samples.OOP.dll
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\obj\Debug\net6.0\refint\Samples.OOP.dll
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\obj\Debug\net6.0\Samples.OOP.pdb
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.OOP\obj\Debug\net6.0\ref\Samples.OOP.dll

@@ -1,0 +1,15 @@
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\bin\Debug\net6.0\Samples.Delegates.exe
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\bin\Debug\net6.0\Samples.Delegates.deps.json
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\bin\Debug\net6.0\Samples.Delegates.runtimeconfig.json
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\bin\Debug\net6.0\Samples.Delegates.dll
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\bin\Debug\net6.0\Samples.Delegates.pdb
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\Samples.Delegates.csproj.AssemblyReference.cache
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\Samples.Delegates.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\Samples.Delegates.AssemblyInfoInputs.cache
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\Samples.Delegates.AssemblyInfo.cs
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\Samples.Delegates.csproj.CoreCompileInputs.cache
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\Samples.Delegates.dll
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\refint\Samples.Delegates.dll
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\Samples.Delegates.pdb
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\Samples.Delegates.genruntimeconfig.cache
+C:\Users\MSI User\Documents\GitHub\OOP\Samples.OOP\Samples.OOP\Samples.Delegates\obj\Debug\net6.0\ref\Samples.Delegates.dll
