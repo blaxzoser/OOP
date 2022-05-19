@@ -8,7 +8,7 @@ namespace Samples.Test
     {
         static void Main(string[] args)
         {
-            PolymorphismSamples.ScenarioEight();
+            Encapsulation.PlayerConsole.ScenarioInit();
         }
 
     }

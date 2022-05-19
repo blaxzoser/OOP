@@ -1,7 +1,5 @@
 ﻿using Samples.OOP;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Samples.Test
 {
