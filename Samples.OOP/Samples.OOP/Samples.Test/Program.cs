@@ -1,15 +1,8 @@
-﻿using Samples.OOP;
-using System;
-using System.Collections.Generic;
-
-namespace Samples.Test
+﻿namespace Samples.Test;
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Encapsulation.PlayerConsole.ScenarioInit();
-        }
-
+        PolymorphismSamples.ScenarioNine();
     }
 }
