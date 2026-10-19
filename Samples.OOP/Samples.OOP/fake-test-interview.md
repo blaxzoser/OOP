@@ -143,7 +143,73 @@ Console.WriteLine($"{teacher1.GetMoney()} {teacher2.GetMoney()}");
 
 ## 3. `override` vs `new` (method hiding)
 
+### Classes used in this section
+
+Pseudo‑code of the real classes, without constructors and unrelated members. `Print(x)` stands for `Console.WriteLine(x)`.
+
+```csharp
+class Teacher                                         // the base class of every class below
+{
+    public virtual void Dance() => Print("Dance()-BASE");
+
+    public void ShowMeDance()                         // NOT virtual
+    {
+        Print("Show me Dance-BASE");
+        Dance();                                      // virtual call made from inside the base class
+    }
+}
+
+class EnglishTeacher : Teacher { public override void Dance() => Print("I don't know dance again how my father"); }
+class BachataTeacher : Teacher { public override void Dance() => Print("Dance - BACHATA"); }
+class StupidTeacher  : Teacher { public override void Dance() => base.Dance(); }
+
+class NewStyleTeacher : Teacher
+{
+    public new void Dance()       => Print("New Style-DANCE");
+    public new void ShowMeDance() => Print("New Show me dance foreverrrrrrrrrr");
+}
+
+class Student : Teacher, IMoveShoulder, IAction
+{
+    public void Dance() => Print("Move Dance Student by Class");   // no 'override', no 'new'
+}
+```
+
+How the classes relate:
+
+```
+                              Teacher
+               virtual Dance() · ShowMeDance() (not virtual)
+                                 │
+     ┌───────────────┬───────────┼───────────────┬─────────────────┐
+EnglishTeacher  BachataTeacher  StupidTeacher  NewStyleTeacher     Student
+override        override        override       new Dance()         Dance() (no modifier)
+Dance()         Dance()         Dance()        new ShowMeDance()   + implements IAction
+```
+
+| Class | `Dance()` | `ShowMeDance()` | Source |
+|---|---|---|---|
+| `Teacher` | `virtual` | its own, not virtual | [Teacher.cs](Samples.OOP/Teacher.cs#L89-L98) |
+| `EnglishTeacher` | `override` | inherited | [EnglishTeacher.cs](Samples.OOP/EnglishTeacher.cs#L23-L26) |
+| `BachataTeacher` | `override` | inherited | [BachataTeacher.cs](Samples.OOP/BachataTeacher.cs#L9-L12) |
+| `StupidTeacher` | `override` → `base.Dance()` | inherited | [StupidTeacher.cs](Samples.OOP/StupidTeacher.cs#L15-L18) |
+| `NewStyleTeacher` | `new` | `new` | [NewStyleTeacher.cs](Samples.OOP/NewStyleTeacher.cs#L9-L17) |
+| `Student` | no modifier (warning CS0114) | inherited | [Student.cs](Samples.OOP/Student.cs#L40-L43) |
+
+Two words used in the questions:
+- **Declared type:** the type of the variable or cast (`Teacher t = …` or `(Teacher)x`).
+- **Runtime type:** the class actually created with `new …()`.
+
 **Q9. 🟢** `EnglishTeacher` **overrides** `Dance()`. What runs for `Teacher t = new EnglishTeacher(); t.Dance();`?
+```csharp
+class Teacher                  { public virtual  void Dance() => Print("Dance()-BASE"); }
+class EnglishTeacher : Teacher { public override void Dance() => Print("I don't know dance again how my father"); }
+
+Teacher t = new EnglishTeacher();   // declared type: Teacher · runtime type: EnglishTeacher
+t.Dance();                          // which Dance() runs?
+```
+🔗 Source: [Teacher.cs · `virtual Dance`](Samples.OOP/Teacher.cs#L89) · [EnglishTeacher.cs · `override Dance`](Samples.OOP/EnglishTeacher.cs#L23) · [InheritanceSamples.cs · the call](Samples.Test/InheritanceSamples.cs#L91-L92)
+
 - A) `EnglishTeacher.Dance()`
 - B) `Teacher.Dance()`
 - C) Both
@@ -157,6 +223,15 @@ Console.WriteLine($"{teacher1.GetMoney()} {teacher2.GetMoney()}");
 </details>
 
 **Q10. 🟡** `NewStyleTeacher` declares `public new void Dance()`. What does `((Teacher)new NewStyleTeacher()).Dance();` print?
+```csharp
+class Teacher                   { public virtual void Dance() => Print("Dance()-BASE"); }
+class NewStyleTeacher : Teacher { public new     void Dance() => Print("New Style-DANCE"); }
+
+var derived = new NewStyleTeacher();
+((Teacher)derived).Dance();          // after the cast, the declared type is Teacher
+```
+🔗 Source: [NewStyleTeacher.cs · `new Dance`](Samples.OOP/NewStyleTeacher.cs#L9) · [PolymorphismSamples.cs · the call](Samples.Test/PolymorphismSamples.cs#L123-L125)
+
 - A) `New Style-DANCE`
 - B) `Dance()-BASE`
 - C) Both lines
@@ -169,7 +244,16 @@ Console.WriteLine($"{teacher1.GetMoney()} {teacher2.GetMoney()}");
 💻 [NewStyleTeacher.cs](Samples.OOP/NewStyleTeacher.cs#L9)
 </details>
 
-**Q11. 🟡** Which one‑liner correctly summarises `override` vs `new`?
+**Q11. 🟡** Which one‑liner correctly summarises `override` vs `new`? Both objects below are called through a `Teacher` cast:
+```csharp
+var derived  = new NewStyleTeacher();   // new      Dance()
+var derived2 = new BachataTeacher();    // override Dance()
+
+((Teacher)derived).Dance();             // prints "Dance()-BASE"
+((Teacher)derived2).Dance();            // prints "Dance - BACHATA"
+```
+🔗 Source: [PolymorphismSamples.cs · ScenarioNine](Samples.Test/PolymorphismSamples.cs#L121-L130) · [NewStyleTeacher.cs](Samples.OOP/NewStyleTeacher.cs#L9) · [BachataTeacher.cs](Samples.OOP/BachataTeacher.cs#L9)
+
 - A) `override` → declared type wins; `new` → runtime type wins
 - B) Both always run the most‑derived method
 - C) `override` → runtime type wins; `new` → declared (compile‑time) type wins
@@ -178,11 +262,27 @@ Console.WriteLine($"{teacher1.GetMoney()} {teacher2.GetMoney()}");
 <details><summary>Answer</summary>
 
 **C.** This is the key takeaway of exercise P9.
+
+| Called through… | `override` (English, Bachata, Stupid) | `new` / no modifier (NewStyle, Student) |
+|---|---|---|
+| A child variable | child method | child method |
+| A `Teacher` variable or cast | **child method** (runtime type) | **`Teacher` method** (declared type) |
+
 📖 [Samples.Test · cheat sheet](Samples.Test/README.md#cheat-sheet) ·
 💻 [PolymorphismSamples.cs](Samples.Test/PolymorphismSamples.cs#L121)
 </details>
 
 **Q12. 🔴** `Teacher.Dance()` is `virtual`. `Student` declares `public void Dance()` with **no** modifier. What happens?
+```csharp
+class Teacher { public virtual void Dance() => Print("Dance()-BASE"); }
+
+class Student : Teacher, IMoveShoulder, IAction
+{
+    public void Dance() => Print("Move Dance Student by Class");   // no 'override', no 'new'
+}
+```
+🔗 Source: [Student.cs · `Dance`](Samples.OOP/Student.cs#L40) · [Teacher.cs · `virtual Dance`](Samples.OOP/Teacher.cs#L89) · [IAction.cs](Samples.OOP/IAction.cs#L9)
+
 - A) Compile error
 - B) It silently becomes an `override`
 - C) The base method is called and `Student.Dance()` is ignored
@@ -190,12 +290,24 @@ Console.WriteLine($"{teacher1.GetMoney()} {teacher2.GetMoney()}");
 
 <details><summary>Answer</summary>
 
-**D.** With no modifier the method hides the base one. The compiler warns and treats it as `new`.
+**D.** With no modifier the method hides the base one. The compiler warns and treats it as `new`. The same method also implements `IAction.Dance()`.
 📖 [Samples.Test · F1](Samples.Test/README.md#5-interfaces--interfacesamplescs) ·
 💻 [Student.cs](Samples.OOP/Student.cs#L40)
 </details>
 
 **Q13. 🔴** `Teacher.ShowMeDance()` is **not** virtual and calls the virtual `Dance()`. `BachataTeacher` overrides `Dance()`. What does `new BachataTeacher().ShowMeDance()` print?
+```csharp
+class Teacher
+{
+    public virtual void Dance() => Print("Dance()-BASE");
+    public void ShowMeDance() { Print("Show me Dance-BASE"); Dance(); }   // NOT virtual
+}
+class BachataTeacher : Teacher { public override void Dance() => Print("Dance - BACHATA"); }
+
+new BachataTeacher().ShowMeDance();   // ShowMeDance is inherited, and Dance() inside it is a virtual call
+```
+🔗 Source: [Teacher.cs · `ShowMeDance`](Samples.OOP/Teacher.cs#L94-L98) · [BachataTeacher.cs · `override Dance`](Samples.OOP/BachataTeacher.cs#L9) · [PolymorphismSamples.cs · the call](Samples.Test/PolymorphismSamples.cs#L105-L106)
+
 - A) `Show me Dance-BASE` then `Dance - BACHATA`
 - B) `Show me Dance-BASE` then `Dance()-BASE`
 - C) `Dance - BACHATA` only
@@ -209,6 +321,23 @@ Console.WriteLine($"{teacher1.GetMoney()} {teacher2.GetMoney()}");
 </details>
 
 **Q14. 🔴** `NewStyleTeacher` hides **both** methods with `new`. Which output comes from `Teacher t = new NewStyleTeacher(); t.ShowMeDance();`?
+```csharp
+class Teacher
+{
+    public virtual void Dance() => Print("Dance()-BASE");
+    public void ShowMeDance() { Print("Show me Dance-BASE"); Dance(); }
+}
+class NewStyleTeacher : Teacher
+{
+    public new void Dance()       => Print("New Style-DANCE");
+    public new void ShowMeDance() => Print("New Show me dance foreverrrrrrrrrr");
+}
+
+Teacher t = new NewStyleTeacher();   // declared type: Teacher · runtime type: NewStyleTeacher
+t.ShowMeDance();                     // which ShowMeDance()? and which Dance() inside it?
+```
+🔗 Source: [NewStyleTeacher.cs](Samples.OOP/NewStyleTeacher.cs#L9-L17) · [Teacher.cs · `ShowMeDance`](Samples.OOP/Teacher.cs#L94-L98) · [InheritanceSamples.cs · the call](Samples.Test/InheritanceSamples.cs#L115-L117)
+
 - A) `New Show me dance foreverrrrrrrrrr`
 - B) `Show me Dance-BASE` then `New Style-DANCE`
 - C) `Show me Dance-BASE` then `Dance()-BASE`
@@ -222,6 +351,18 @@ Console.WriteLine($"{teacher1.GetMoney()} {teacher2.GetMoney()}");
 </details>
 
 **Q15. 🟡** `StupidTeacher` overrides `Dance()` with `base.Dance();`. What does `new StupidTeacher().Dance()` print (ignoring constructor lines)?
+```csharp
+class Teacher { public virtual void Dance() => Print("Dance()-BASE"); }
+
+class StupidTeacher : Teacher
+{
+    public override void Dance() { base.Dance(); }   // 'base' = Teacher
+}
+
+new StupidTeacher().Dance();
+```
+🔗 Source: [StupidTeacher.cs · `override Dance`](Samples.OOP/StupidTeacher.cs#L15-L18) · [Teacher.cs · `virtual Dance`](Samples.OOP/Teacher.cs#L89) · [PolymorphismSamples.cs · the call](Samples.Test/PolymorphismSamples.cs#L81-L84)
+
 - A) Nothing
 - B) `Dance()-BASE`
 - C) Infinite recursion
