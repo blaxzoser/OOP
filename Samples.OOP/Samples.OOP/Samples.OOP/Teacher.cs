@@ -48,7 +48,7 @@ namespace Samples.OOP
             this.Title = title;
             this.Description = desc;
             this.jobLength = joblen;
-            System.Console.WriteLine("Created Teache by args");
+            System.Console.WriteLine("Created Teacher by args");
         }
 
         // Static constructor to initialize the static member, currentID. This
@@ -57,7 +57,7 @@ namespace Samples.OOP
         static Teacher()
         {
             currentID = 0;
-            System.Console.WriteLine("Assigned CurrentID=0-CALL STATIC CONTRUCTOR");
+            System.Console.WriteLine("Assigned CurrentID=0-CALL STATIC CONSTRUCTOR");
         }
 
         protected int GetNextID()

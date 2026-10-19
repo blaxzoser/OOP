@@ -38,7 +38,7 @@ namespace Samples.Generic
         /// </summary>
         public static void ScenarioTwo()
         {
-            // GenericList<Programer> list = new GenericList<Programer>(); // it's not valid
+            // GenericList<Programmer> list = new GenericList<Programmer>(); // it's not valid
             GenericList<Dancer> list = new GenericList<Dancer>();
             list.AddHead(new Dancer("miguel", 1));
             list.AddHead(new Dancer("carlos", 2));

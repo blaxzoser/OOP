@@ -51,7 +51,7 @@
     }
 
     //Classic sample of Static
-    public static void ScenarioTree()
+    public static void ScenarioThree()
     {
         //Simply put, a static constructor is a special constructor that is an ideal place to initialize the
         //values of static data when the value is not known at compile time(e.g., you need to read in the value
@@ -79,9 +79,9 @@
         Console.ReadKey();
     }
 
-    //What happen when you change 'new' vs override(nothing)
-    // in the case you put @override this scenario teacherB,teacherC  calls alwayas to father
-    // int the case you put @new it gonna be good call the child
+    //What happens when you change 'new' vs override(nothing)
+    // with @override (current code) all 4 calls run the child EnglishTeacher.Dance(), even through a Teacher variable or cast
+    // with @new (commented version in EnglishTeacher) only 'teacher' runs the child; teacherB, teacherC and the cast run Teacher.Dance() (base)
     public static void ScenarioFour()
     {
         EnglishTeacher teacher = new EnglishTeacher();
@@ -103,18 +103,18 @@
     }
 
 
-    //Classic override with "new" witout override
+    //Classic override with "new" without override
     public static void ScenarioFive()
     {
         NewStyleTeacher teacher = new NewStyleTeacher();
         teacher.Dance();  // Show Child 
-        teacher.ShowMeDance(); // Show Father 
+        teacher.ShowMeDance(); // Show Child - NewStyleTeacher hides ShowMeDance() with 'new'
         Console.WriteLine("------------------");
 
 
         Teacher newTeacher = (Teacher)teacher;
-        newTeacher.Dance();
-        newTeacher.ShowMeDance(); // Show father -public virtual void Dance()
+        newTeacher.Dance(); // Show Father - 'new' Dance() is not used through a Teacher variable
+        newTeacher.ShowMeDance(); // Show Father - base ShowMeDance() calls virtual Dance(), not overridden, so base Dance()
 
 
         Console.WriteLine("------------------");

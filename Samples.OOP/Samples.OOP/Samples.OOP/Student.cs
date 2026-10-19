@@ -16,7 +16,7 @@ namespace Samples.OOP
         public Student(string title, string desc, TimeSpan jobLen,
                       int originalID)
         {
-            // The following properties and the GetNexID method are inherited 
+            // The following properties and the GetNextID method are inherited 
             // from WorkItem.
             this.ID = GetNextID();
             this.Title = title;
@@ -32,11 +32,11 @@ namespace Samples.OOP
 
         public void MoveOn()
         {
-            System.Console.WriteLine("Move Shoulders Studen");
+            System.Console.WriteLine("Move Shoulders Student");
         }
 
         //Typical question in interview
-        //Showwing apply again
+        //Showing apply again
         public  void Dance()
         {
             System.Console.WriteLine("Move Dance Student by Class");

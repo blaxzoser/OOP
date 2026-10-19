@@ -40,7 +40,7 @@ namespace Samples.Delegates
         /// <summary>
         /// We used Func<T,TResult> to create a flexible behaviour
         /// </summary>
-        public static void ScenarioTree()
+        public static void ScenarioThree()
         {
             Func<int, int, int,int,int> myFuncSum = (x, y, z, w) => x + y + z +w;
             Func<int, int, int,int,int> myFuncMulti = (x, y, z, w) => x * y * z *w;

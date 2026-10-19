@@ -20,22 +20,22 @@ namespace Solution
         public delegate string convertToString<O>(O item);
 
         // TODO: It should be Refactor
-        Dictionary<string, convertToString<User>> _userDiccionary = new Dictionary<string, convertToString<User>>();
-        Dictionary<string, convertToString<Company>> _companyDiccionary = new Dictionary<string, convertToString<Company>>();
+        Dictionary<string, convertToString<User>> _userDictionary = new Dictionary<string, convertToString<User>>();
+        Dictionary<string, convertToString<Company>> _companyDictionary = new Dictionary<string, convertToString<Company>>();
 
         public TemplateParser()
         {
 
         }
 
-        public void Register<T>(string? nameClassPropery, convertToString<User> itemPath)
+        public void Register<T>(string? nameClassProperty, convertToString<User> itemPath)
         {
-            _userDiccionary.Add(nameClassPropery, itemPath);
+            _userDictionary.Add(nameClassProperty, itemPath);
         }
 
-        public void Register<T>(string? nameClassPropery, convertToString<Company> itemPath)
+        public void Register<T>(string? nameClassProperty, convertToString<Company> itemPath)
         {
-            _companyDiccionary.Add(nameClassPropery, itemPath);
+            _companyDictionary.Add(nameClassProperty, itemPath);
         }
 
         public string Parse(string template, object[] objects)
@@ -46,7 +46,7 @@ namespace Solution
                 var type = shape.GetType();
 
                 // TODO: It should be Refactor
-                foreach (var register in _userDiccionary)
+                foreach (var register in _userDictionary)
                 {
                     // TODO: It should be Refactor
                     if (type == typeof(User))
@@ -57,7 +57,7 @@ namespace Solution
                 }
 
                 // TODO: It should be Refactor
-                foreach (var register in _companyDiccionary)
+                foreach (var register in _companyDictionary)
                 {
                     // TODO: It should be Refactor
                     if (type == typeof(Company))

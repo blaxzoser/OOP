@@ -17,11 +17,11 @@ internal class PlayerConsole
         Console.WriteLine($"New Player2 age:{player2.Age}"); // GOOD readonly
     }
 
-    // Test 'private set' propery
+    // Test 'private set' property
     //Usually it works when you want to change internal and readonly for external classes
     public static void ScenarioPrivateSet()
     {
-        var player = new Player(); // It will assing new ID on that constructor 
+        var player = new Player(); // It will assign new ID on that constructor 
         //player.ID = Guid.NewGuid(); ERROR
 
         Console.WriteLine($"New Player ID:{ player.ID}"); // GOOD readonly

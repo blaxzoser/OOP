@@ -13,7 +13,7 @@ namespace Samples.OOP
         /// </summary>
         //public new void Dance()
         //{
-        //    System.Console.WriteLine("I dont know dance again i'm new");
+        //    System.Console.WriteLine("I don't know dance again I'm new");
         //}
 
 
@@ -22,7 +22,7 @@ namespace Samples.OOP
         /// </summary>
         public override void Dance()
         {
-            System.Console.WriteLine("I dont know dance again how my father");
+            System.Console.WriteLine("I don't know dance again how my father");
         }
 
     }

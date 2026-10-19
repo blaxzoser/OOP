@@ -10,25 +10,25 @@ namespace Samples.OOP
 
         public AbstractTeacher()
         {
-            System.Console.WriteLine("BASE-Create Abstact class");
+            System.Console.WriteLine("BASE-Create Abstract class");
         }
 
         public AbstractTeacher(string name)
         {
             Name = name;
-            System.Console.WriteLine("BASE-Create Abstact class with args");
+            System.Console.WriteLine("BASE-Create Abstract class with args");
         }
         public virtual void Dance()
         {
-            Console.WriteLine("BASE-Dace Abstract");
+            Console.WriteLine("BASE-Dance Abstract");
         }
         public virtual void DoClass()
         {
-            Console.WriteLine("BASE-DoClass  Abstrac");
+            Console.WriteLine("BASE-DoClass Abstract");
         }
         public abstract void SetMoney();
 
-        public abstract string Shudule
+        public abstract string Schedule
         {
             get;
         }
@@ -37,7 +37,7 @@ namespace Samples.OOP
 
         public override string ToString()
         {
-            return " Shudle = " + Shudule;
+            return " Schedule = " + Schedule;
         }
 
     }

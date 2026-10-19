@@ -10,7 +10,7 @@ public static class PolymorphismSamples
     public static void ScenarioFour()
     {
         // Polymorphism at work #1: a Rectangle, Triangle and Circle
-        // can all be used whereever a Shape is expected. No cast is
+        // can all be used wherever a Shape is expected. No cast is
         // required because an implicit conversion exists from a derived 
         // class to its base class.
         // A SalsaTeacher "is-a" Teacher.
@@ -103,7 +103,7 @@ public static class PolymorphismSamples
         System.Console.WriteLine("----------");
 
         BachataTeacher bachataTeacher = new BachataTeacher();
-        bachataTeacher.ShowMeDance(); //go to  base
+        bachataTeacher.ShowMeDance(); //go to base ShowMeDance(), which calls the override BachataTeacher.Dance()
         System.Console.WriteLine("----------");
 
         StupidTeacher stupidTeacher = new StupidTeacher();

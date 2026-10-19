@@ -22,19 +22,19 @@ public static class AbstractSamples
         Console.ReadKey();
     }
 
-    //Check properites Abstract
+    //Check properties Abstract
     public static void Scenario2()
     {
         AfroTeacher afroTeacher1 = new AfroTeacher();
         afroTeacher1.Dance();
         afroTeacher1.SetMoney();
-        Console.WriteLine(afroTeacher1.Shudule);
+        Console.WriteLine(afroTeacher1.Schedule);
         System.Console.WriteLine("----------");
 
-        BaletTeacher balet = new BaletTeacher();
-        balet.Dance();
-        balet.SetMoney();
-        Console.WriteLine(balet.Shudule);
+        BalletTeacher ballet = new BalletTeacher();
+        ballet.Dance();
+        ballet.SetMoney();
+        Console.WriteLine(ballet.Schedule);
         System.Console.WriteLine("----------");
 
 
@@ -49,16 +49,16 @@ public static class AbstractSamples
         ReguetonTeacher regueton = new ReguetonTeacher("Luis Pintado");
         regueton.Dance();
         regueton.SetMoney();
-        Console.WriteLine(regueton.Shudule);
+        Console.WriteLine(regueton.Schedule);
         Console.WriteLine("the name is:" + regueton.Name);
         System.Console.WriteLine("----------");
 
-        BaletTeacher balet = new BaletTeacher();
-        balet.Name = "Diana";
-        balet.Dance();
-        balet.SetMoney();
-        Console.WriteLine(balet.Shudule);
-        Console.WriteLine("the name is:" + balet.Name);
+        BalletTeacher ballet = new BalletTeacher();
+        ballet.Name = "Diana";
+        ballet.Dance();
+        ballet.SetMoney();
+        Console.WriteLine(ballet.Schedule);
+        Console.WriteLine("the name is:" + ballet.Name);
         System.Console.WriteLine("----------");
 
 
@@ -83,7 +83,7 @@ public static class AbstractSamples
         SuperAfroTeacher super = new SuperAfroTeacher();
         super.Dance(); // Calls Child
         super.SetMoney();
-        Console.WriteLine(super.Shudule);
+        Console.WriteLine(super.Schedule);
         Console.WriteLine("the name is:" + super.Name);
         System.Console.WriteLine("----------");
         ((AfroTeacher)super).Dance(); // Call parent

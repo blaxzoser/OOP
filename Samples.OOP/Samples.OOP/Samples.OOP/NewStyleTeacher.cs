@@ -8,7 +8,7 @@ namespace Samples.OOP
     {
         public new void Dance()
         {
-            System.Console.WriteLine("New Sytle-DANCE");
+            System.Console.WriteLine("New Style-DANCE");
         }
 
         public new void ShowMeDance()

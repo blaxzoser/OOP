@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Samples.Generics
 {
-    public class Programer
+    public class Programmer
     {
     }
 }

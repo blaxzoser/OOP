@@ -6,7 +6,7 @@ namespace Samples.OOP
 {
     public class ReguetonTeacher : AbstractTeacher
     {
-        public override string Shudule => "21:00";
+        public override string Schedule => "21:00";
 
         public ReguetonTeacher(string name) 
             :base(name)

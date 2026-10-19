@@ -11,7 +11,7 @@ namespace Samples.OOP
             System.Console.WriteLine("Create AfroTeacher");
         }
 
-        public override string Shudule 
+        public override string Schedule 
         {
             get
             {
@@ -21,7 +21,7 @@ namespace Samples.OOP
 
         public override void Dance()
         {
-            Console.WriteLine("Dace AFRO");
+            Console.WriteLine("Dance AFRO");
         }
 
         public override void SetMoney()
