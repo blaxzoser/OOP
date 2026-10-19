@@ -24,6 +24,7 @@ Solution file: [`Samples.BlaxZoser.sln`](Samples.BlaxZoser.sln).
 6. **Interfaces** — [Samples.Test F1–F2](Samples.Test/README.md#5-interfaces--interfacesamplescs)
 7. **Generics** — [Samples.Generics G1–G2](Samples.Generic/README.md), then **variance** [V1–V6](Samples.Generic/README.md#variance--in-and-out-with-generic-inheritance)
 8. **Delegates** — [Samples.Delegates D1–D3](Samples.Delegates/README.md), then the interview problem **C1**
+9. **Test yourself** — [fake-test-interview.md](fake-test-interview.md): 48 multiple‑choice questions, each linked to its answer
 
 ## Running any project
 
