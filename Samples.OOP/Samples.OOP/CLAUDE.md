@@ -33,8 +33,8 @@ dotnet run --project Samples.Test
 - Leave the deliberate oddities alone: warning **CS0114** on `Student.Dance()` and the
   `// TODO: It should be Refactor` code in `ComplexDelegate.cs`. They are part of what the exercises teach.
 - If you change a console output string, update the expected output in the matching README too.
-- `fake-test-interview.md` quotes outputs and links to code lines (`file.cs#L<n>`). Update it when you
-  move code, rename things or add new topics.
+- `fake-test-interview.md` and `cheatcode.md` quote outputs and link to code lines (`file.cs#L<n>`).
+  Update both when you move code, rename things or add new topics.
 - **Keep the READMEs in sync:** when you add or change a scenario, update that project's README (overview
   table row, level, question it answers, expected output). Take expected output from an actual run, not from
   reasoning about the code. Note that the `Teacher` static constructor line prints once per process.

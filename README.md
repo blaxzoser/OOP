@@ -36,11 +36,13 @@ The solution is [`Samples.BlaxZoser.sln`](Samples.OOP/Samples.OOP/Samples.BlaxZo
 For a suggested order to work through the exercises, see the
 [solution overview](Samples.OOP/Samples.OOP/README.md#suggested-learning-path).
 
-## Mock interview
+## Interview prep
 
-Test yourself with the **[fake technical interview](Samples.OOP/Samples.OOP/fake-test-interview.md)**:
-48 multiple‑choice questions across all nine topics, with levels. Every answer links to the README section
-and the line of code that explains it.
+1. **Revise** with the **[cheat code](Samples.OOP/Samples.OOP/cheatcode.md)**: the 12 rules to
+   remember, snippets, diagrams and the compiler errors to recognise, all on one page.
+2. **Test yourself** with the **[fake technical interview](Samples.OOP/Samples.OOP/fake-test-interview.md)**:
+   48 multiple‑choice questions across all nine topics, with levels. Every answer links to the README
+   section and the line of code that explains it.
 
 ## Repository layout
 
@@ -50,6 +52,7 @@ OOP/
 └── Samples.OOP/Samples.OOP/
     ├── Samples.BlaxZoser.sln
     ├── README.md                  ← solution overview & learning path
+    ├── cheatcode.md               ← one-page interview cheat code
     ├── fake-test-interview.md     ← 48-question mock interview
     ├── CLAUDE.md                  ← guidance for Claude Code
     ├── Samples.OOP/               ← class library (the model)

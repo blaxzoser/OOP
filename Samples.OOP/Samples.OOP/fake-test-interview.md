@@ -6,6 +6,9 @@ to the README section that explains it (📖) and to the code that proves it (�
 **How to use it:** answer each question before opening **Answer**. Count your score with the
 [answer key](#answer-key) at the end.
 
+📝 **Need a quick refresher first?** Read the **[cheat code](cheatcode.md)**: the rules, snippets and
+diagrams behind every question.
+
 | # | Topic | Questions | Level |
 |---|---|---|---|
 | 1 | [Encapsulation](#1-encapsulation) | Q1–Q4 | 🟢 |
