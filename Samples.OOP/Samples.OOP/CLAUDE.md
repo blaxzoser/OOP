@@ -10,7 +10,7 @@ C# (.NET 6) practice solution for OOP concepts and interview questions. Solution
 |---|---|---|
 | `Samples.OOP` (class library) | [Samples.OOP/README.md](Samples.OOP/README.md) | Class hierarchy, what each class demonstrates, known quirks |
 | `Samples.Test` (console) | [Samples.Test/README.md](Samples.Test/README.md) | All 20 OOP exercises: question, level, expected output |
-| `Samples.Generics` (console, folder `Samples.Generic`) | [Samples.Generic/README.md](Samples.Generic/README.md) | Generic method/class exercises |
+| `Samples.Generics` (console, folder `Samples.Generic`) | [Samples.Generic/README.md](Samples.Generic/README.md) | Generic method/class exercises + `in`/`out` variance (V1–V6) |
 | `Samples.Delegates` (console) | [Samples.Delegates/README.md](Samples.Delegates/README.md) | Delegate/`Action`/`Func` exercises + `TemplateParser` interview problem |
 
 ## Build & run

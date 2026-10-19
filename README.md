@@ -16,7 +16,8 @@ constructors run?"*. Each project's README has the expected output, a difficulty
 - **Constructors:** chaining, `: base(args)`, static constructors and shared static state
 - **Interfaces:** a class that inherits a class *and* implements interfaces
 - **Encapsulation in modern C#:** `readonly`, `private set`, `init` (C# 9)
-- **Generics:** generic methods, generic classes, `where` constraints, `yield return`
+- **Generics:** generic methods, generic classes, `where` constraints, `yield return`, generic inheritance
+- **Variance (`in` / `out`):** covariance and contravariance with real‑world examples (validators, repositories, comparers)
 - **Delegates:** custom delegates, `Action`, `Func`, and a template‑parser interview problem with a suggested refactor
 
 ## Projects
@@ -27,7 +28,7 @@ The solution is [`Samples.BlaxZoser.sln`](Samples.OOP/Samples.OOP/Samples.BlaxZo
 |---|---|---|---|---|
 | [Samples.OOP](Samples.OOP/Samples.OOP/Samples.OOP/README.md) | Class library | Teacher/student class model used by the OOP exercises | — | 🟢 → 🔴 |
 | [Samples.Test](Samples.OOP/Samples.OOP/Samples.Test/README.md) | Console | Encapsulation, inheritance, polymorphism, abstract classes, interfaces | 20 | 🟢 → 🔴 |
-| [Samples.Generics](Samples.OOP/Samples.OOP/Samples.Generic/README.md) | Console | Generic methods/classes, constraints, iterators | 2 | 🟢 → 🟡 |
+| [Samples.Generics](Samples.OOP/Samples.OOP/Samples.Generic/README.md) | Console | Generic methods/classes, constraints, iterators, `in`/`out` variance | 8 | 🟢 → 🔴 |
 | [Samples.Delegates](Samples.OOP/Samples.OOP/Samples.Delegates/README.md) | Console | Delegates, `Action`, `Func`, interview problem | 4 | 🟢 → 🔴 |
 
 🟢 Beginner · 🟡 Intermediate · 🔴 Advanced / interview trap
@@ -46,7 +47,7 @@ OOP/
     ├── CLAUDE.md                  ← guidance for Claude Code
     ├── Samples.OOP/               ← class library (the model)
     ├── Samples.Test/              ← OOP exercises
-    ├── Samples.Generic/           ← generics exercises
+    ├── Samples.Generic/           ← generics & variance exercises
     └── Samples.Delegates/         ← delegates exercises
 ```
 

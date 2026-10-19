@@ -9,7 +9,7 @@ Solution file: [`Samples.BlaxZoser.sln`](Samples.BlaxZoser.sln).
 |---|---|---|---|---|
 | [Samples.OOP](Samples.OOP/README.md) | Class library | The class model: inheritance, `virtual`/`override`/`new`, abstract classes, interfaces, static members, encapsulation | — (used by Samples.Test) | 🟢 → 🔴 |
 | [Samples.Test](Samples.Test/README.md) | Console app | Runnable scenarios on encapsulation, inheritance, polymorphism, abstract classes and interfaces | 20 | 🟢 → 🔴 |
-| [Samples.Generics](Samples.Generic/README.md) | Console app | Generic methods, generic classes, type constraints, iterators | 2 | 🟢 → 🟡 |
+| [Samples.Generics](Samples.Generic/README.md) | Console app | Generic methods, generic classes, type constraints, iterators, `in`/`out` variance | 8 | 🟢 → 🔴 |
 | [Samples.Delegates](Samples.Delegates/README.md) | Console app | Custom delegates, `Action`, `Func`, plus a template‑parser interview problem | 4 | 🟢 → 🔴 |
 
 **Levels:** 🟢 Beginner · 🟡 Intermediate · 🔴 Advanced / interview trap
@@ -22,7 +22,7 @@ Solution file: [`Samples.BlaxZoser.sln`](Samples.BlaxZoser.sln).
 4. **`override` vs `new`** — I4, P6, P9, then the traps I5 and P8
 5. **Abstract classes** — [Samples.Test A1–A4](Samples.Test/README.md#4-abstract-classes--abstractsamplescs)
 6. **Interfaces** — [Samples.Test F1–F2](Samples.Test/README.md#5-interfaces--interfacesamplescs)
-7. **Generics** — [Samples.Generics G1–G2](Samples.Generic/README.md)
+7. **Generics** — [Samples.Generics G1–G2](Samples.Generic/README.md), then **variance** [V1–V6](Samples.Generic/README.md#variance--in-and-out-with-generic-inheritance)
 8. **Delegates** — [Samples.Delegates D1–D3](Samples.Delegates/README.md), then the interview problem **C1**
 
 ## Running any project
