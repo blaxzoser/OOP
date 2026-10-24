@@ -3,12 +3,14 @@ using System.Collections.Generic;
 
 namespace Samples.Generics
 {
-    // 'out' (covariance): T is only RETURNED.
+    // 'out' (covariance): T is only RETURNED for all methods that you  defined  MUST return 
     // An IProducer<SalsaDancer> can be used as an IProducer<Dancer>.
     public interface IProducer<out T>
     {
         T Produce();
         // void Accept(T item); // ERROR CS1961: an 'out' T can't be used as a parameter
+        //T DoSomething(); // It's possible , no errors because it return OUT T = RETURN
+        //T Domething2(T time); //ERROR too even it has return something , it has an 'out' T can't be used as a parameter
     }
 
     // 'in' (contravariance): T is only ACCEPTED.

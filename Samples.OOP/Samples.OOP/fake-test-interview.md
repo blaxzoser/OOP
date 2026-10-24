@@ -67,6 +67,23 @@ diagrams behind every question.
 </details>
 
 **Q4. 🟡** What is the value of `new Player(23).ID`?
+```csharp
+public class Player
+{
+    public Guid ID { get; private set; }
+    public readonly int Age;
+
+    public Player()          { ID = Guid.NewGuid(); }   // constructor 1: sets ID
+    public Player(int age)   { this.Age = age; }        // constructor 2: only sets Age
+}
+
+var p = new Player(23);     // which constructor runs? does anything set ID?
+Console.WriteLine(p.ID);
+```
+🔗 Source: [Player.cs · both constructors](Samples.OOP/Encapsulation/Player.cs#L9-L17)
+
+> 💡 Context: `Guid` is a **struct** (value type), so it can never be `null`. An unassigned struct property holds its default value.
+
 - A) A new random GUID
 - B) `null`
 - C) It doesn't compile
@@ -84,6 +101,28 @@ diagrams behind every question.
 ## 2. Constructors & static members
 
 **Q5. 🟢** `Student : Teacher`. In a fresh program, `new Student("t", "d", span, 1)` runs. In what order?
+```csharp
+class Teacher
+{
+    static Teacher() { Print("Assigned CurrentID=0-CALL STATIC CONSTRUCTOR"); }   // static ctor
+    public Teacher() { Print("Created Teacher-CALL CONSTRUCTOR BASE"); }          // parameterless ctor
+    public Teacher(string title, string desc, TimeSpan joblen) { /* ... */ }
+}
+
+class Student : Teacher
+{
+    public Student(string title, string desc, TimeSpan jobLen, int originalID)    // no ': base(...)'
+    {
+        // ... sets ID, Title, Description, jobLength, originalItemID
+        Print("Created Student by args-CHILD");
+    }
+}
+
+// First line of the program: nothing has touched Teacher yet
+new Student("t", "d", span, 1);
+```
+🔗 Source: [Teacher.cs · constructors](Samples.OOP/Teacher.cs#L35-L61) · [Student.cs · 4‑arg constructor](Samples.OOP/Student.cs#L16-L31) · [InheritanceSamples.cs · the call](Samples.Test/InheritanceSamples.cs#L43-L46)
+
 - A) `Student` ctor → `Teacher()` → static `Teacher()`
 - B) static `Teacher()` → `Teacher()` → `Student` ctor body
 - C) `Teacher()` → static `Teacher()` → `Student` ctor body
@@ -97,6 +136,25 @@ diagrams behind every question.
 </details>
 
 **Q6. 🟢** `Student`'s 4‑argument constructor has no `: base(...)`. Which `Teacher` constructor runs?
+```csharp
+class Teacher
+{
+    public Teacher() { ... }                                          // (1) parameterless
+    public Teacher(string title, string desc, TimeSpan joblen) { ... } // (2) three arguments
+}
+
+class Student : Teacher
+{
+    // Takes title, desc, jobLen (+ originalID) but does NOT write ': base(title, desc, jobLen)'
+    public Student(string title, string desc, TimeSpan jobLen, int originalID)
+    {
+        this.Title = title;          // sets the inherited properties itself
+        ...
+    }
+}
+```
+🔗 Source: [Teacher.cs · constructor (1)](Samples.OOP/Teacher.cs#L35-L42) · [Teacher.cs · constructor (2)](Samples.OOP/Teacher.cs#L45-L52) · [Student.cs · 4‑arg constructor](Samples.OOP/Student.cs#L16-L31)
+
 - A) None
 - B) `Teacher(string, string, TimeSpan)`, because the arguments match
 - C) The parameterless `Teacher()`, implicitly
@@ -384,9 +442,16 @@ new StupidTeacher().Dance();
 
 **Q16. 🟢** What does the loop print (ignoring constructor lines)?
 ```csharp
+class Teacher                  { public virtual  void Dance() => Print("Dance()-BASE"); }
+class SalsaTeacher   : Teacher { public override void Dance() => Print("Dance - SALSA"); }
+class HipHopTeacher  : Teacher { public override void Dance() => Print("Dance - HIPHOP"); }
+class BachataTeacher : Teacher { public override void Dance() => Print("Dance - BACHATA"); }
+
 var teachers = new List<Teacher> { new SalsaTeacher(), new HipHopTeacher(), new BachataTeacher() };
-foreach (var t in teachers) t.Dance();
+foreach (var t in teachers) t.Dance();   // declared type of t: Teacher · runtime type: changes each loop
 ```
+🔗 Source: [SalsaTeacher.cs](Samples.OOP/SalsaTeacher.cs#L9-L12) · [HipHopTeacher.cs](Samples.OOP/HipHopTeacher.cs#L9-L12) · [BachataTeacher.cs](Samples.OOP/BachataTeacher.cs#L9-L12) · [PolymorphismSamples.cs · the loop](Samples.Test/PolymorphismSamples.cs#L17-L29)
+
 - A) `Dance()-BASE` three times
 - B) `Dance - SALSA`, `Dance - HIPHOP`, `Dance - BACHATA`
 - C) Compile error: you need to cast each item
@@ -400,6 +465,15 @@ foreach (var t in teachers) t.Dance();
 </details>
 
 **Q17. 🟢** Why can a `SalsaTeacher` be added to a `List<Teacher>` without a cast?
+```csharp
+public class SalsaTeacher : Teacher { ... }      // SalsaTeacher derives from Teacher
+
+var teachers = new List<Teacher>();              // List<T>.Add(T item) → here Add(Teacher item)
+teachers.Add(new SalsaTeacher());                // no (Teacher) cast written
+Teacher teacher = new SalsaTeacher();            // same idea with a plain variable
+```
+🔗 Source: [SalsaTeacher.cs · class declaration](Samples.OOP/SalsaTeacher.cs#L7) · [PolymorphismSamples.cs · list and variable](Samples.Test/PolymorphismSamples.cs#L12-L32)
+
 - A) Because `List<T>` accepts any object
 - B) Because of `dynamic`
 - C) Because an implicit conversion (upcast) exists from a derived class to its base class: a `SalsaTeacher` *is a* `Teacher`
@@ -417,6 +491,22 @@ foreach (var t in teachers) t.Dance();
 ## 5. Abstract classes
 
 **Q18. 🟢** `AbstractTeacher` has `abstract void SetMoney()`, `abstract string Schedule { get; }` and `virtual void Dance()`. What **must** a non‑abstract child implement?
+```csharp
+public abstract class AbstractTeacher
+{
+    public virtual void Dance()   => Print("BASE-Dance Abstract");     // has a body
+    public virtual void DoClass() => Print("BASE-DoClass Abstract");   // has a body
+    public abstract void SetMoney();                                   // no body
+    public abstract string Schedule { get; }                           // no body
+}
+
+public class BalletTeacher : AbstractTeacher   // a concrete (non-abstract) child
+{
+    // ??? which members must appear here for this class to compile?
+}
+```
+🔗 Source: [AbstractTeacher.cs · members](Samples.OOP/AbstractTeacher.cs#L21-L34) · [BalletTeacher.cs · a real child](Samples.OOP/BalletTeacher.cs#L7-L19) · [AbstractSamples.cs · Scenario2](Samples.Test/AbstractSamples.cs#L26-L44)
+
 - A) `SetMoney()` and `Schedule`
 - B) `SetMoney()`, `Schedule` and `Dance()`
 - C) Only `Dance()`
@@ -456,6 +546,24 @@ foreach (var t in teachers) t.Dance();
 </details>
 
 **Q21. 🟡** In what order do the constructors print for `new SuperAfroTeacher()` (`SuperAfroTeacher : AfroTeacher : AbstractTeacher`)?
+```csharp
+public abstract class AbstractTeacher
+{
+    public AbstractTeacher() { Print("BASE-Create Abstract class"); }
+}
+public class AfroTeacher : AbstractTeacher
+{
+    public AfroTeacher() { Print("Create AfroTeacher"); }        // implicit ': base()'
+}
+public class SuperAfroTeacher : AfroTeacher
+{
+    public SuperAfroTeacher() { Print("Created SuperAfroTeacher"); }   // implicit ': base()'
+}
+
+new SuperAfroTeacher();   // three constructors print — in which order?
+```
+🔗 Source: [AbstractTeacher.cs](Samples.OOP/AbstractTeacher.cs#L11-L14) · [AfroTeacher.cs](Samples.OOP/AfroTeacher.cs#L9-L12) · [SuperAfroTeacher.cs](Samples.OOP/SuperAfroTeacher.cs#L9-L12) · [AbstractSamples.cs · the call](Samples.Test/AbstractSamples.cs#L83)
+
 - A) `Created SuperAfroTeacher` → `Create AfroTeacher` → `BASE-Create Abstract class`
 - B) `BASE-Create Abstract class` → `Create AfroTeacher` → `Created SuperAfroTeacher`
 - C) `Create AfroTeacher` → `BASE-Create Abstract class` → `Created SuperAfroTeacher`
@@ -469,6 +577,19 @@ foreach (var t in teachers) t.Dance();
 </details>
 
 **Q22. 🔴** `SuperAfroTeacher` declares `public new void Dance()`. What does `((AfroTeacher)super).Dance();` print?
+```csharp
+public abstract class AbstractTeacher { public virtual  void Dance() => Print("BASE-Dance Abstract"); }
+public class AfroTeacher : AbstractTeacher { public override void Dance() => Print("Dance AFRO"); }
+public class SuperAfroTeacher : AfroTeacher { public new void Dance() => Print("Dance SuperAfroTeacher"); }
+
+SuperAfroTeacher super = new SuperAfroTeacher();
+super.Dance();                 // declared type: SuperAfroTeacher
+((AfroTeacher)super).Dance();  // declared type after the cast: AfroTeacher · runtime type: SuperAfroTeacher
+```
+🔗 Source: [AbstractTeacher.cs · `virtual Dance`](Samples.OOP/AbstractTeacher.cs#L21-L24) · [AfroTeacher.cs · `override Dance`](Samples.OOP/AfroTeacher.cs#L22-L25) · [SuperAfroTeacher.cs · `new Dance`](Samples.OOP/SuperAfroTeacher.cs#L14-L17) · [AbstractSamples.cs · the calls](Samples.Test/AbstractSamples.cs#L83-L89)
+
+> 💡 Context: `new` hides `AfroTeacher.Dance()` instead of overriding it, so the "most‑derived override" seen through an `AfroTeacher` reference is still `AfroTeacher`'s own.
+
 - A) `Dance SuperAfroTeacher`
 - B) `BASE-Dance Abstract`
 - C) `Dance AFRO`
@@ -482,6 +603,24 @@ foreach (var t in teachers) t.Dance();
 </details>
 
 **Q23. 🔴** When is shadowing with `new` the right tool rather than `override`?
+```csharp
+// Imagine AfroTeacher ships in a NuGet package you bought: you only have the compiled DLL.
+public class AfroTeacher                           // simplified: base class and other members left out
+{
+    public void Dance() => Print("Dance AFRO");    // suppose it is NOT virtual → you can't override it
+}
+
+// Your code:
+public class SuperAfroTeacher : AfroTeacher
+{
+    public override void Dance() { ... }   // ❌ CS0506: cannot override, the member isn't virtual
+    public new      void Dance() { ... }   // ✅ compiles: hides the parent's method
+}
+```
+🔗 Source: [AbstractSamples.cs · the explanation in the comment](Samples.Test/AbstractSamples.cs#L70-L80) · [SuperAfroTeacher.cs · `new Dance`](Samples.OOP/SuperAfroTeacher.cs#L14-L17)
+
+> 💡 Context: in the repo `AfroTeacher.Dance()` *is* an `override` (so it's virtual). The snippet above is the scenario the comment in `AbstractSamples.cs` describes: a base class you don't own.
+
 - A) Always, because it's faster
 - B) When you can't make the base method `virtual`, for example because it's in a third‑party library you can't edit
 - C) When the base method is `abstract`
@@ -525,6 +664,24 @@ foreach (var t in teachers) t.Dance();
 </details>
 
 **Q26. 🟢** How does `Student` satisfy `IMoveShoulder.MoveOn()`?
+```csharp
+public interface IMoveShoulder
+{
+    void MoveOn();                         // the contract: no body, no access modifier
+}
+
+public class Student : Teacher, IMoveShoulder, IAction
+{
+    public void MoveOn() => Print("Move Shoulders Student");   // no 'override', no 'implements'
+}
+
+var student = new Student();
+student.MoveOn();
+IMoveShoulder mover = student;   // the same object seen through the interface
+mover.MoveOn();
+```
+🔗 Source: [IMoveShoulder.cs](Samples.OOP/IMoveShoulder.cs#L7-L10) · [Student.cs · `MoveOn`](Samples.OOP/Student.cs#L33-L36) · [InterfaceSamples.cs · ScenarioTwo](Samples.Test/InterfaceSamples.cs#L14-L17)
+
 - A) With the `implements` keyword
 - B) Implicitly, with a `public void MoveOn()` method that has the same signature
 - C) With `override void MoveOn()`
@@ -542,6 +699,26 @@ foreach (var t in teachers) t.Dance();
 ## 7. Generics
 
 **Q27. 🟢** Why does `Swap<T>(ref T a, ref T b)` need `ref`?
+```csharp
+public static void Swap<T>(ref T a, ref T b)
+{
+    T temp = a;
+    a = b;
+    b = temp;
+}
+
+var a = 10;
+var b = 20;
+SampleGeneric.Swap<int>(ref a, ref b);
+Console.WriteLine($"{a} {b}");   // prints "20 10"
+
+// Thought experiment: remove both 'ref' keywords (signature and call).
+// void Swap<T>(T a, T b) { ... } → what would a and b print after the call?
+```
+🔗 Source: [SampleGeneric.cs · `Swap<T>`](Samples.Generic/SampleGeneric.cs#L9-L15) · [Program.cs · ScenarioOne](Samples.Generic/Program.cs#L20-L29)
+
+> 💡 Context: `int` is a value type, so passing it *by value* hands the method a copy. `ref` passes the caller's variable itself.
+
 - A) Because generics require `ref`
 - B) Without `ref` it would only swap its own local copies, so the caller's variables wouldn't change
 - C) To allow `null`
@@ -568,6 +745,25 @@ foreach (var t in teachers) t.Dance();
 </details>
 
 **Q29. 🟡** `GenericList<T> where T : Dancer`. What happens with `new GenericList<Programmer>()`?
+```csharp
+public class Dancer                              // the constraint's base type
+{
+    public string Name { get; set; }
+    public int ID { get; set; }
+}
+public class Programmer { }                      // does NOT inherit from Dancer
+
+public class GenericList<T> where T : Dancer     // T must be Dancer or a subclass of it
+{
+    public void AddHead(T t) { ... }
+    public T FindFirstOccurrence(string s) { ... }
+}
+
+GenericList<Dancer> ok = new GenericList<Dancer>();          // used in the repo
+GenericList<Programmer> list = new GenericList<Programmer>(); // ← this line
+```
+🔗 Source: [GenericList.cs · the constraint](Samples.Generic/GenericList.cs#L7) · [Dancer.cs](Samples.Generic/Dancer.cs#L7-L12) · [Programmer.cs](Samples.Generic/Programmer.cs#L7-L9) · [Program.cs · the commented‑out line](Samples.Generic/Program.cs#L41-L42)
+
 - A) It works, because constraints are only hints
 - B) Runtime `InvalidCastException`
 - C) It works, but `FindFirstOccurrence` returns `null`
@@ -581,6 +777,27 @@ foreach (var t in teachers) t.Dance();
 </details>
 
 **Q30. 🟡** Why does `T t = null;` compile inside `GenericList<T>`?
+```csharp
+public class GenericList<T> where T : Dancer     // Dancer is a class
+{
+    public T FindFirstOccurrence(string s)
+    {
+        Node current = head;
+        T t = null;                              // ← this line
+        while (current != null)
+        {
+            if (current.Data.Name == s) { t = current.Data; break; }   // .Name comes from Dancer
+            current = current.Next;
+        }
+        return t;
+    }
+}
+
+// Compare with an unconstrained method:
+static T First<T>() { T t = null; return t; }   // ❌ CS0403: T could be int, and an int can't be null
+```
+🔗 Source: [GenericList.cs · `FindFirstOccurrence`](Samples.Generic/GenericList.cs#L36-L55) · [GenericList.cs · the constraint](Samples.Generic/GenericList.cs#L7)
+
 - A) Because `where T : Dancer` makes `T` a reference type
 - B) Every `T` can be `null`
 - C) Because of `#nullable disable`
@@ -607,6 +824,35 @@ foreach (var t in teachers) t.Dance();
 </details>
 
 **Q32. 🟢** You call `AddHead` with `miguel`, then `carlos`, then `kakaroto`. In what order does `foreach` print them?
+```csharp
+public class GenericList<T> where T : Dancer
+{
+    private class Node { public Node Next; public T Data; }
+    private Node head;                            // first node of a singly linked list
+
+    public void AddHead(T t)
+    {
+        Node n = new Node(t) { Next = head };     // the new node points to the old head...
+        head = n;                                 // ...and becomes the new head
+    }
+
+    public IEnumerator<T> GetEnumerator()         // foreach walks from head following Next
+    {
+        Node current = head;
+        while (current != null) { yield return current.Data; current = current.Next; }
+    }
+}
+
+var list = new GenericList<Dancer>();
+list.AddHead(new Dancer("miguel", 1));
+list.AddHead(new Dancer("carlos", 2));
+list.AddHead(new Dancer("kakaroto", 3));
+foreach (var d in list) Console.WriteLine(d.Name);
+```
+🔗 Source: [GenericList.cs · `AddHead` and `GetEnumerator`](Samples.Generic/GenericList.cs#L17-L34) · [Program.cs · the three `AddHead` calls](Samples.Generic/Program.cs#L42-L45)
+
+> 💡 Context: `Program.cs` calls `FindFirstOccurrence` instead of `foreach`. The `foreach` line is added here to test the order.
+
 - A) miguel, carlos, kakaroto
 - B) Random
 - C) kakaroto, carlos, miguel
@@ -625,12 +871,38 @@ foreach (var t in teachers) t.Dance();
 
 `SalsaDancer : Dancer` and `BachataDancer : Dancer` are the model for every question in this section.
 
+### Classes and .NET types used in this section
+
+```csharp
+public class Dancer        { public string Name; public int ID; }   // base class (reference type)
+public class SalsaDancer   : Dancer { public int Level; }           // subtype 1
+public class BachataDancer : Dancer { }                             // subtype 2
+
+// .NET declarations (simplified) — look at the 'out' / 'in' keywords:
+public interface IEnumerable<out T>   { IEnumerator<T> GetEnumerator(); }   // only gives T back
+public interface IReadOnlyList<out T> { T this[int index] { get; } }        // only gives T back
+public class     List<T>              { void Add(T item); T this[int i] { get; set; } }  // takes AND gives T
+public delegate void    Action<in T>(T obj);                                  // only takes T
+public delegate TResult Func<in T, out TResult>(T arg);                       // takes T, gives TResult
+```
+
+Two words used in the questions:
+- **Covariance (`out`):** `Something<SalsaDancer>` can be used as `Something<Dancer>` (same direction as inheritance).
+- **Contravariance (`in`):** `Something<Dancer>` can be used as `Something<SalsaDancer>` (opposite direction).
+
+🔗 Source: [Dancer.cs](Samples.Generic/Dancer.cs#L7-L12) · [SalsaDancer.cs](Samples.Generic/SalsaDancer.cs#L7-L11) · [BachataDancer.cs](Samples.Generic/BachataDancer.cs#L7-L10) · [VarianceContracts.cs · the repo's own `in`/`out` interfaces](Samples.Generic/Variance/VarianceContracts.cs#L8-L40)
+
 **Q33. 🟢** Which line compiles?
 ```csharp
 var salsa = new List<SalsaDancer>();
-IEnumerable<Dancer> a = salsa;   // (1)
-List<Dancer> b = salsa;          // (2)
+IEnumerable<Dancer> a = salsa;   // (1) target is an interface declared with 'out T'
+List<Dancer> b = salsa;          // (2) target is a class with plain 'T'
+
+// Why it matters: if (2) compiled, this would be legal
+b.Add(new BachataDancer("carlos", 2));   // a BachataDancer inside a List<SalsaDancer>?!
 ```
+🔗 Source: [VarianceSamples.cs · ScenarioOne](Samples.Generic/Variance/VarianceSamples.cs#L19-L30)
+
 - A) Only (1)
 - B) Only (2)
 - C) Both
@@ -700,6 +972,16 @@ dancers[1] = new BachataDancer("carlos", 2);
 </details>
 
 **Q38. 🟡** Why doesn't `IEnumerable<object> boxed = new List<int>();` compile?
+```csharp
+IEnumerable<object> words = new List<string> { "salsa", "bachata" };   // ✅ compiles
+List<int> numbers = new List<int> { 1, 2, 3 };
+IEnumerable<object> boxed = numbers;                                    // ❌ but this doesn't
+IEnumerable<object> boxed2 = numbers.Cast<object>();                    // ✅ and this does
+```
+🔗 Source: [VarianceSamples.cs · ScenarioFour, part 2](Samples.Generic/Variance/VarianceSamples.cs#L99-L104)
+
+> 💡 Context: `string` is a **class** (reference type); `int` is a **struct** (value type). A `string` is already an object reference, but an `int` has to be *boxed* (copied into a new object on the heap) before it can be treated as `object`.
+
 - A) Variance only works for **reference types**. `int` would need boxing, so use `.Cast<object>()`
 - B) `List<int>` doesn't implement `IEnumerable<int>`
 - C) `object` isn't a valid type argument
@@ -713,6 +995,17 @@ dancers[1] = new BachataDancer("carlos", 2);
 </details>
 
 **Q39. 🟡** Why can't you write `public class Box<out T> { }`?
+```csharp
+public interface IProducer<out T> { T Produce(); }          // ✅ interface with 'out' (from the repo)
+public delegate TResult Func<in T, out TResult>(T arg);      // ✅ delegate with 'in' / 'out' (.NET)
+public class Box<out T> { }                                  // ❌ class with 'out'
+
+// The same split exists in .NET:
+IReadOnlyList<Dancer> readOnly = new List<SalsaDancer>();    // ✅ IReadOnlyList<out T> is an interface
+List<Dancer> list = new List<SalsaDancer>();                 // ❌ List<T> is a class
+```
+🔗 Source: [VarianceContracts.cs · `IProducer<out T>`](Samples.Generic/Variance/VarianceContracts.cs#L8) · [VarianceSamples.cs · ScenarioFour, part 3](Samples.Generic/Variance/VarianceSamples.cs#L106-L110)
+
 - A) `Box` is a reserved word
 - B) Only **interfaces and delegates** can declare variant type parameters (**CS1960**)
 - C) Variance needs C# 11
@@ -840,6 +1133,36 @@ new Calculator().Math(10, 10, add);
 </details>
 
 **Q48. 🔴** What's the main design problem with `TemplateParser`, and what's a good fix?
+```csharp
+public class TemplateParser
+{
+    public delegate string convertToString<O>(O item);
+
+    // One dictionary PER supported type
+    Dictionary<string, convertToString<User>>    _userDictionary    = new();
+    Dictionary<string, convertToString<Company>> _companyDictionary = new();
+
+    // One Register overload PER supported type (T is never used)
+    public void Register<T>(string token, convertToString<User> f)    => _userDictionary.Add(token, f);
+    public void Register<T>(string token, convertToString<Company> f) => _companyDictionary.Add(token, f);
+
+    public string Parse(string template, object[] objects)
+    {
+        foreach (var obj in objects)
+        {
+            foreach (var r in _userDictionary)    if (obj.GetType() == typeof(User))    { /* replace */ }
+            foreach (var r in _companyDictionary) if (obj.GetType() == typeof(Company)) { /* replace */ }
+        }
+        ...
+    }
+}
+
+// Exercise: what must change in this class to support a new 'Product' type?
+```
+🔗 Source: [ComplexDelegate.cs · `TemplateParser`](Samples.Delegates/ComplexDelegate.cs#L18-L71) · [ComplexDelegate.cs · how it's used](Samples.Delegates/ComplexDelegate.cs#L79-L89)
+
+> 💡 Context: the **Open/Closed principle** (the "O" in SOLID) says a class should be *open for extension* (support new cases) but *closed for modification* (without editing its existing code).
+
 - A) It uses delegates; replace them with `switch` statements
 - B) It needs one dictionary and one overload **per type**, which breaks Open/Closed. Fix it with a single `Dictionary<Type, List<(string Token, Func<object, string?>)>>` filled by `Register<T>(string, Func<T, string?>)`
 - C) It's too slow; use `StringBuilder` and nothing else

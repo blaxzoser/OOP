@@ -1,0 +1,308 @@
+{
+  "Samples.OOP/Samples.OOP/Samples.BlaxZoser.sln": {
+    "mtime": 1792421254.2200773,
+    "seen": 1792614953.8373277,
+    "ast_hash": "7e8ed6abcd1747bf69313ec8cb03f786",
+    "semantic_hash": "7e8ed6abcd1747bf69313ec8cb03f786"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Delegates/Calculator.cs": {
+    "mtime": 1792422452.2872653,
+    "seen": 1792614953.8375354,
+    "ast_hash": "565e2b40a043bbd1237cf41914fa9179",
+    "semantic_hash": "565e2b40a043bbd1237cf41914fa9179"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Delegates/ComplexDelegate.cs": {
+    "mtime": 1792422798.28336,
+    "seen": 1792614953.837583,
+    "ast_hash": "ac75d42ce3b33f8e119810d9070a8c20",
+    "semantic_hash": "ac75d42ce3b33f8e119810d9070a8c20"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Delegates/DelegateSamples.cs": {
+    "mtime": 1792422798.28336,
+    "seen": 1792614953.8375895,
+    "ast_hash": "4019c631856106d956902ccd324b1bc3",
+    "semantic_hash": "4019c631856106d956902ccd324b1bc3"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Delegates/Program.cs": {
+    "mtime": 1792422452.4620187,
+    "seen": 1792614953.837596,
+    "ast_hash": "5f5049a005121973f9a5a245f790d05a",
+    "semantic_hash": "5f5049a005121973f9a5a245f790d05a"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Delegates/Samples.Delegates.csproj": {
+    "mtime": 1792421254.2357135,
+    "seen": 1792614953.8376012,
+    "ast_hash": "74cc730e5886d221cbd083dda8d3670f",
+    "semantic_hash": "74cc730e5886d221cbd083dda8d3670f"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/BachataDancer.cs": {
+    "mtime": 1792423476.8138952,
+    "seen": 1792614953.837608,
+    "ast_hash": "d5c86a11ddce311032c54d49dc33f887",
+    "semantic_hash": "d5c86a11ddce311032c54d49dc33f887"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/Dancer.cs": {
+    "mtime": 1792422452.5245397,
+    "seen": 1792614953.8376133,
+    "ast_hash": "715358ebd6963cdf27295e9b913cc55a",
+    "semantic_hash": "715358ebd6963cdf27295e9b913cc55a"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/GenericList.cs": {
+    "mtime": 1792422452.5802622,
+    "seen": 1792614953.8377168,
+    "ast_hash": "3fc6f17cae056ab51f402d73d824b0e2",
+    "semantic_hash": "3fc6f17cae056ab51f402d73d824b0e2"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/Program.cs": {
+    "mtime": 1792422798.28336,
+    "seen": 1792614953.8378108,
+    "ast_hash": "b7c75c7b1219693a649d993b1adbfd68",
+    "semantic_hash": "b7c75c7b1219693a649d993b1adbfd68"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/Programmer.cs": {
+    "mtime": 1792422798.28336,
+    "seen": 1792614953.8378212,
+    "ast_hash": "34d00d6712b0813c6e235e11a0876a32",
+    "semantic_hash": "34d00d6712b0813c6e235e11a0876a32"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/SalsaDancer.cs": {
+    "mtime": 1792423476.7090442,
+    "seen": 1792614953.8378305,
+    "ast_hash": "c0fca0d08b98dc256ff578135ad9341a",
+    "semantic_hash": "c0fca0d08b98dc256ff578135ad9341a"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/SampleGeneric.cs": {
+    "mtime": 1792422452.7178814,
+    "seen": 1792614953.8378365,
+    "ast_hash": "5493a8ec0257da309aea8831827757d9",
+    "semantic_hash": "5493a8ec0257da309aea8831827757d9"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/Samples.Generics.csproj": {
+    "mtime": 1792421254.2357135,
+    "seen": 1792614953.8378682,
+    "ast_hash": "2147efb905c2066bcbc54a706de42c4d",
+    "semantic_hash": "2147efb905c2066bcbc54a706de42c4d"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/Variance/VarianceContracts.cs": {
+    "mtime": 1792423488.5560665,
+    "seen": 1792614953.8378806,
+    "ast_hash": "95ecfc3875e1996acffba98fee2bc8e7",
+    "semantic_hash": "95ecfc3875e1996acffba98fee2bc8e7"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/Variance/VarianceImplementations.cs": {
+    "mtime": 1792423488.6723552,
+    "seen": 1792614953.8378866,
+    "ast_hash": "82c6a92a8b5a15d98f7669290d6ebd4d",
+    "semantic_hash": "82c6a92a8b5a15d98f7669290d6ebd4d"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/Variance/VarianceSamples.cs": {
+    "mtime": 1792423515.4412844,
+    "seen": 1792614953.8378909,
+    "ast_hash": "216496ba32be24b63faaf37fe4242a18",
+    "semantic_hash": "216496ba32be24b63faaf37fe4242a18"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/AbstractTeacher.cs": {
+    "mtime": 1792422798.2989974,
+    "seen": 1792614953.8378952,
+    "ast_hash": "682165b5e05ad238cfa5c325f9d279b9",
+    "semantic_hash": "682165b5e05ad238cfa5c325f9d279b9"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/AfroTeacher.cs": {
+    "mtime": 1792422798.2989974,
+    "seen": 1792614953.8378994,
+    "ast_hash": "c0fbe46c10fcdd4f22678f0ec456a69a",
+    "semantic_hash": "c0fbe46c10fcdd4f22678f0ec456a69a"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/BachataTeacher.cs": {
+    "mtime": 1792422452.8622992,
+    "seen": 1792614953.8379195,
+    "ast_hash": "cb2769a3d61f5fb2a115383e0ec92178",
+    "semantic_hash": "cb2769a3d61f5fb2a115383e0ec92178"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/BalletTeacher.cs": {
+    "mtime": 1792422798.2989974,
+    "seen": 1792614953.8379464,
+    "ast_hash": "b1283aa50242edc14a0d6e2e9e9e3d5d",
+    "semantic_hash": "b1283aa50242edc14a0d6e2e9e9e3d5d"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/Encapsulation/Player.cs": {
+    "mtime": 1792422798.3040283,
+    "seen": 1792614953.8379598,
+    "ast_hash": "677125b4fc457b2a00496e2078522946",
+    "semantic_hash": "677125b4fc457b2a00496e2078522946"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/EnglishTeacher.cs": {
+    "mtime": 1792422798.3055696,
+    "seen": 1792614953.8379867,
+    "ast_hash": "fdf4b14ed2668a460a1d89876305e504",
+    "semantic_hash": "fdf4b14ed2668a460a1d89876305e504"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/HipHopTeacher.cs": {
+    "mtime": 1792422453.0623333,
+    "seen": 1792614953.837992,
+    "ast_hash": "dcb613fa6dbe23d1ba7730138ea3044f",
+    "semantic_hash": "dcb613fa6dbe23d1ba7730138ea3044f"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/IAction.cs": {
+    "mtime": 1792422453.0881226,
+    "seen": 1792614953.8379962,
+    "ast_hash": "8209d2bc62d4c6910366ab009dc2cbc8",
+    "semantic_hash": "8209d2bc62d4c6910366ab009dc2cbc8"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/IMoveShoulder.cs": {
+    "mtime": 1792422453.1362028,
+    "seen": 1792614953.8380003,
+    "ast_hash": "8bab60256903520dde6893f0fc86a09f",
+    "semantic_hash": "8bab60256903520dde6893f0fc86a09f"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/NewStyleTeacher.cs": {
+    "mtime": 1792422798.3066003,
+    "seen": 1792614953.8380055,
+    "ast_hash": "843f26f51b8ef33856deaa4d8fddc7ab",
+    "semantic_hash": "843f26f51b8ef33856deaa4d8fddc7ab"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/ReguetonTeacher.cs": {
+    "mtime": 1792422798.3076081,
+    "seen": 1792614953.8380098,
+    "ast_hash": "8315a8403876d819a2d387d268d1cae5",
+    "semantic_hash": "8315a8403876d819a2d387d268d1cae5"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/SalsaTeacher.cs": {
+    "mtime": 1792422453.2782578,
+    "seen": 1792614953.8380144,
+    "ast_hash": "15e0872bd4591a8c8575c2c6fca2bd13",
+    "semantic_hash": "15e0872bd4591a8c8575c2c6fca2bd13"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/Samples.OOP.csproj": {
+    "mtime": 1792421254.2357135,
+    "seen": 1792614953.838019,
+    "ast_hash": "1cbf3602394c23193c6c97e3a7c03bc3",
+    "semantic_hash": "1cbf3602394c23193c6c97e3a7c03bc3"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/Student.cs": {
+    "mtime": 1792422798.3076081,
+    "seen": 1792614953.8380234,
+    "ast_hash": "aeaf93aff08f43bdb479d6deb93300f9",
+    "semantic_hash": "aeaf93aff08f43bdb479d6deb93300f9"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/StupidTeacher.cs": {
+    "mtime": 1792422453.3782616,
+    "seen": 1792614953.8380272,
+    "ast_hash": "5da0dd9e6eb93ef683a0ae5979c5d85d",
+    "semantic_hash": "5da0dd9e6eb93ef683a0ae5979c5d85d"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/SuperAfroTeacher.cs": {
+    "mtime": 1792422453.4364755,
+    "seen": 1792614953.8380332,
+    "ast_hash": "8c81287311d5dc9cd908ad2b27defce9",
+    "semantic_hash": "8c81287311d5dc9cd908ad2b27defce9"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/Teacher.cs": {
+    "mtime": 1792422798.3076081,
+    "seen": 1792614953.8380387,
+    "ast_hash": "b9b271baefa1551d5f641123360b2304",
+    "semantic_hash": "b9b271baefa1551d5f641123360b2304"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Test/AbstractSamples.cs": {
+    "mtime": 1792422798.3076081,
+    "seen": 1792614953.8380473,
+    "ast_hash": "d8863171904474e6536f2abbca4bd24f",
+    "semantic_hash": "d8863171904474e6536f2abbca4bd24f"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Test/Encapsulation/PlayerConsole.cs": {
+    "mtime": 1792422798.3076081,
+    "seen": 1792614953.838051,
+    "ast_hash": "35775e06785c85e836e7a66f5e331846",
+    "semantic_hash": "35775e06785c85e836e7a66f5e331846"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Test/GlobalSettings.cs": {
+    "mtime": 1792422453.662645,
+    "seen": 1792614953.8380554,
+    "ast_hash": "7a43480c772fa44040ed12dcffe78fd4",
+    "semantic_hash": "7a43480c772fa44040ed12dcffe78fd4"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Test/InheritanceSamples.cs": {
+    "mtime": 1792422798.3076081,
+    "seen": 1792614953.8380597,
+    "ast_hash": "707f29fb857041fac7213a1f68c13273",
+    "semantic_hash": "707f29fb857041fac7213a1f68c13273"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Test/InterfaceSamples.cs": {
+    "mtime": 1792422453.76252,
+    "seen": 1792614953.8380642,
+    "ast_hash": "012ee0f312d5f933ee97bd8ace821460",
+    "semantic_hash": "012ee0f312d5f933ee97bd8ace821460"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Test/PolymorphismSamples.cs": {
+    "mtime": 1792422798.3076081,
+    "seen": 1792614953.838069,
+    "ast_hash": "293de68f1cbe2f0e9325d6fa8cdb693c",
+    "semantic_hash": "293de68f1cbe2f0e9325d6fa8cdb693c"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Test/Program.cs": {
+    "mtime": 1792422453.8548174,
+    "seen": 1792614953.838074,
+    "ast_hash": "8aca45888f067078534576448fe7c758",
+    "semantic_hash": "8aca45888f067078534576448fe7c758"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Test/Samples.Test.csproj": {
+    "mtime": 1792421254.2513375,
+    "seen": 1792614953.8380783,
+    "ast_hash": "7d089a65c822bbccfe21b5fe3da24b59",
+    "semantic_hash": "7d089a65c822bbccfe21b5fe3da24b59"
+  },
+  "README.md": {
+    "mtime": 1792430895.7927873,
+    "seen": 1792614953.8380826,
+    "ast_hash": "c048364ba7f90f95bace3d5fee714a27",
+    "semantic_hash": "c048364ba7f90f95bace3d5fee714a27"
+  },
+  "Samples.OOP/Samples.OOP/CLAUDE.md": {
+    "mtime": 1792430895.9090414,
+    "seen": 1792614953.838108,
+    "ast_hash": "e9affac2f77429ae163f7ecd0f87de9b",
+    "semantic_hash": "e9affac2f77429ae163f7ecd0f87de9b"
+  },
+  "Samples.OOP/Samples.OOP/README.md": {
+    "mtime": 1792430888.7205033,
+    "seen": 1792614953.8381147,
+    "ast_hash": "43ed421a77d7a1d8483d8011233b214a",
+    "semantic_hash": "43ed421a77d7a1d8483d8011233b214a"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Delegates/README.md": {
+    "mtime": 1792422798.28336,
+    "seen": 1792614953.8381233,
+    "ast_hash": "74bee1156e43366c5d047e55caf6030e",
+    "semantic_hash": "74bee1156e43366c5d047e55caf6030e"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Generic/README.md": {
+    "mtime": 1792423606.5925796,
+    "seen": 1792614953.8381288,
+    "ast_hash": "02d0a55993c10ba8f0b99e98425b40d3",
+    "semantic_hash": "02d0a55993c10ba8f0b99e98425b40d3"
+  },
+  "Samples.OOP/Samples.OOP/Samples.OOP/README.md": {
+    "mtime": 1792422798.3076081,
+    "seen": 1792614953.8381345,
+    "ast_hash": "039b9db024b18ad1ecc53bd5dba2a91e",
+    "semantic_hash": "039b9db024b18ad1ecc53bd5dba2a91e"
+  },
+  "Samples.OOP/Samples.OOP/Samples.Test/README.md": {
+    "mtime": 1792422798.3076081,
+    "seen": 1792614953.83814,
+    "ast_hash": "96784c15c020e1dbd2fd4d6e34d1ccc4",
+    "semantic_hash": "96784c15c020e1dbd2fd4d6e34d1ccc4"
+  },
+  "Samples.OOP/Samples.OOP/cheatcode.md": {
+    "mtime": 1792430888.0314503,
+    "seen": 1792614953.8381457,
+    "ast_hash": "1c2c15e5d2c3a3cf76d56777b7504078",
+    "semantic_hash": "1c2c15e5d2c3a3cf76d56777b7504078"
+  },
+  "Samples.OOP/Samples.OOP/fake-test-interview.md": {
+    "mtime": 1792430888.6260865,
+    "seen": 1792614953.8381512,
+    "ast_hash": "39eb7210ab7af1cada26c6552a82c0c0",
+    "semantic_hash": "39eb7210ab7af1cada26c6552a82c0c0"
+  }
+}
